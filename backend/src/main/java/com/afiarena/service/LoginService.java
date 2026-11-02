@@ -24,4 +24,8 @@ public class LoginService {
         if(authentication.isAuthenticated()) return jwtService.generateToken(gamesUsers.getGameUserName());
         return "login failed";
     }
+
+    public void logoutUser(GamesUsers gamesUser) {
+
+    }
 }

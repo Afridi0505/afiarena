@@ -12,8 +12,14 @@ public class LoginController
 {
     @Autowired
     LoginService loginService;
+
     @RequestMapping("login")
-    public String verifyGameUsers(@RequestBody GamesUsers gamesUsers){
-        return loginService.verifyGameUsers(gamesUsers);
+    public String verifyGameUsers(@RequestBody GamesUsers gamesUser){
+        return loginService.verifyGameUsers(gamesUser);
+    }
+
+    @RequestMapping("logout")
+    public void logout(GamesUsers gamesUser){
+        loginService.logoutUser(gamesUser);
     }
 }
